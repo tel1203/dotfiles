@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/tel/src/rtx1100_natdesc.sh'
+let g:netrw_dirhist_2='/Volumes/Untitled'
+let g:netrw_dirhist_3='/Users/tel/src/201511_KIC_Lecture_IoT/http_post.rb'
+let g:netrw_dirhist_4='/Users/tel/.vim'
