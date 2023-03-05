@@ -1,0 +1,25 @@
+ihttps://www.karakaram.com/how-to-automate-your-mac-set-up/
+Macの開発環境構築を自動化する(2019年6月編)
+
+sudo softwareupdate --install-rosetta
+sudo xcodebuild -license
+sudo softwareupdate --install-rosetta
+
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/tel/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+touch Brewfile
+
+CTRL, CAPS 入れ替え
+IME操作をWindows風に設定
+
+コンピュータ名 MacMini2021
+
+anyenv
+echo 'eval "$(anyenv init -)"' >> ~/.zshrc
+
+rbenv
+rbenv install -l
+rbenv install 3.0.1
+
