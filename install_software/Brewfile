@@ -14,7 +14,7 @@ brew "anyenv"
 brew "python3"
 
 cask "alfred"
-cask "synergy"
+#cask "synergy"
 cask "bettertouchtool"
 cask "google-chrome"
 cask "google-drive-file-stream"
@@ -29,10 +29,11 @@ cask "slack"
 cask "krisp"
 
 mas "Magnet", id: 441258766
-mas "Line", id: 539883307
+mas "LINE", id: 539883307
+mas "LINE WORKS", id: 1029784963
 mas "Evernote", id: 406056744
+#Office365
 mas "Microsoft Word", id: 462054704
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft PowerPoint", id: 462062816
-#Office365
 
