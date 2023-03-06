@@ -1,0 +1,105 @@
+{
+  "title": "Ctrl + Page up/Page down/Home/End",
+  "rules": [
+    {
+      "description": "Ctrl + Page up to Page Up",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "page_up",
+            "modifiers": {
+              "mandatory": [
+                "ctrl"
+              ],
+              "optional": [
+                "caps_lock",
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "page_up"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Ctrl + Page down to Page down",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "page_down",
+            "modifiers": {
+              "mandatory": [
+                "ctrl"
+              ],
+              "optional": [
+                "caps_lock",
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "page_down"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Ctrl + Home to Home",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "home",
+            "modifiers": {
+              "mandatory": [
+                "ctrl"
+              ],
+              "optional": [
+                "caps_lock",
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "home"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Ctrl + End to End",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "end",
+            "modifiers": {
+              "mandatory": [
+                "ctrl"
+              ],
+              "optional": [
+                "caps_lock",
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "end"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
