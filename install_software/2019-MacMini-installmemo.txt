@@ -1,25 +1,55 @@
-ihttps://www.karakaram.com/how-to-automate-your-mac-set-up/
+https://www.karakaram.com/how-to-automate-your-mac-set-up/
 Macの開発環境構築を自動化する(2019年6月編)
 
+* ソフトウェア環境の更新
 sudo softwareupdate --install-rosetta
 sudo xcodebuild -license
 sudo softwareupdate --install-rosetta
 
+* HomeBrewインストール
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/tel/.zprofile
+
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/ytel/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-touch Brewfile
+* SSH鍵の作成
+ssh-keygen -t ed25519 -C "tel1203@gmail.com"
+cat .ssh/id_ed25519.pub|pbcopy
+（GitHubへ登録）
 
+* BrewFileの取得
+git clone git@github.com:tel1203/dotfiles.git
+cd dotfiles/install_software
+brew bundle
+
+
+* その他の設定
+トラックパッドのドラッグ設定
+  アクセシビリティ→ポインタコントロール→トラックパッドオプション
+  - ドラッグにトラックパッドを使用
+  - ドラッグ方法「ドラッグロックあり」
 CTRL, CAPS 入れ替え
 IME操作をWindows風に設定
 
 コンピュータ名 MacMini2021
+コンピュータ名 MBAir2023 (20230305)
 
-anyenv
+* anyenvインストール
+git clone https://github.com/anyenv/anyenv ~/.anyenv
+echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.zshrc
 echo 'eval "$(anyenv init -)"' >> ~/.zshrc
+anyenv install --init
 
+anyenv install rbenv
 rbenv
 rbenv install -l
-rbenv install 3.0.1
+rbenv install 3.0.1 # 2019
+rbenv install 3.1.3 # 20230306
+
+
+
+
+
+* 変更履歴
+2023/03/05 Macbook Air 購入時に、HomeBrewインストール方法を修正
 
