@@ -6,16 +6,17 @@ sudo softwareupdate --install-rosetta
 sudo xcodebuild -license
 sudo softwareupdate --install-rosetta
 
-* HomeBrewインストール
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/ytel/.zprofile
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
 * SSH鍵の作成
 ssh-keygen -t ed25519 -C "tel1203@gmail.com"
 cat .ssh/id_ed25519.pub|pbcopy
 （GitHubへ登録）
+https://github.com/settings/keys
+
+* HomeBrewインストール
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/ytel/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 * BrewFileの取得
 git clone git@github.com:tel1203/dotfiles.git
@@ -24,15 +25,28 @@ brew bundle
 
 
 * その他の設定
-トラックパッドのドラッグ設定
+- トラックパッドのドラッグ設定
   アクセシビリティ→ポインタコントロール→トラックパッドオプション
-  - ドラッグにトラックパッドを使用
-  - ドラッグ方法「ドラッグロックあり」
-CTRL, CAPS 入れ替え
-IME操作をWindows風に設定
+    - ドラッグにトラックパッドを使用
+    - ドラッグ方法「ドラッグロックあり」
+  「トラックパッド」→「その他のジェスチャ」→「アプリケーションExpose」→「3本指で下にスワイプ」
+- キーボード関係
+  - 「キーボードナビゲーション」をオン
+  - 「キーボード」→「キーボードショートカット」
+    - 「ファンクションキー」→ 「F1、F2などのキーを標準のファンクションキーとして使用」をオン
+    - CTRL, CAPS 入れ替え
+    「修飾キー」→ 「Caps Lockキー」を「^Control」に変更
+ 
+  - IME操作をWindows風に設定
+「アクセシビリティ」→「ズーム機能」
+  「スクロールジェスチャと修飾キーを使ってズーム」→オン
+  「スクロールジェスチャーの修飾キー」→「Command」
+「アクセシビリティ」→「ディスプレイ」→「カーソルのサイズ」
 
-コンピュータ名 MacMini2021
-コンピュータ名 MBAir2023 (20230305)
+「一般」→「情報」→「コンピュータ名」
+  コンピュータ名 MacMini2021
+  コンピュータ名 MBAir2023 (20230305)
+  コンピュータ名 MBPr2023 (20230523)
 
 * anyenvインストール
 git clone https://github.com/anyenv/anyenv ~/.anyenv
