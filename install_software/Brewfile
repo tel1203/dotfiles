@@ -17,7 +17,8 @@ cask "alfred"
 #cask "synergy"
 cask "bettertouchtool"
 cask "google-chrome"
-cask "google-drive-file-stream"
+#cask "google-drive-file-stream" # Error at 20230523
+cask "google-drive"
 cask "google-japanese-ime"
 cask "intellij-idea"
 cask "iterm2"
@@ -26,6 +27,7 @@ cask "keyboardcleantool"
 cask "visual-studio-code"
 cask "skype"
 cask "slack"
+cask "utm"
 cask "krisp"
 
 mas "Magnet", id: 441258766
