@@ -66,4 +66,5 @@ rbenv install 3.1.3 # 20230306
 
 * 変更履歴
 2023/03/05 Macbook Air 購入時に、HomeBrewインストール方法を修正
+2023/05/23 Macbook Pro 購入時に、HomeBrewインストール方法を修正, NICT
 
